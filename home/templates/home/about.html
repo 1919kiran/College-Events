@@ -1,9 +1,23 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
 <div class="container">
   <div class="jumbotron">
-    <h1>Bootstrap Tutorial</h1>
-    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-    responsive, mobile-first projects on the web.</p>
+    <h1>About the website</h1><br/><br/>
+    <p style="text-indent: 50px">College Events website is a web-application which displays the current departmental, club and community events happening at
+      Vasavi College of Engineering. The application is responsive, robust and reliable and is developed to overcome the obfuscation in the
+      current college website.</p><br/>
+    <p style="text-indent: 50px">The website can be viewed in three modes: Organiser mode and participant mode and spectator mode. The organisers have
+      the privilege toadd an event to the website which is accessible to all other users. They can also add participants to the event. The participant has
+      the privilege to view the events they are enrolled in and can ask queries in the noticeboard. The spectators can only view the event details
+      of the event and do not require any login.The web-application has three sections: The navbar which contains tabs to view the current events categorized
+       by sections,a tab to contact the organiser, a tab which displays the information about each event and a home button which would redirect the website to
+      its homepage. The footer contains the social account and contact information of the developers.
+    </p><br/>
+    <p style="text-indent: 50px">The back-end of the web-application is developed using Django framework. The front-end of the web-application is developed
+       using HTML5, CSS and Bootstrap. It handles the databases, forms, login, etc. Few libraries like AllAuth are used to integrate the user’s login with
+        their Google account., which would notify the users by delivering an email in their inbox, regarding any updates on the events.
+   </p><br/>
   </div>
-  <p>This is some text.</p>
-  <p>This is another text.</p>
 </div>

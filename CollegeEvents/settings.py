@@ -56,7 +56,10 @@ ROOT_URLCONF = 'CollegeEvents.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                '/home/about.html'
+                '/home/landing.html'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

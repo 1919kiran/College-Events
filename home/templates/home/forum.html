@@ -1,0 +1,83 @@
+{% load static %}
+<style>
+
+body  {
+  background:#222;
+  font-family:"Helvetica Neue","Helvetica",Arial,"Lucida   Grande",sans-serif;
+}
+
+h3 {
+  font-size:1.5em;
+  font-weight:100;
+  letter-spacing:1em;
+  text-transform:uppercase;
+  text-shadow:0px 0px 20px $blue;
+  color:$blue;
+  display:inline-block;
+}
+
+h3:nth(1){
+  animation:bounce 1s ease-in-out forwards;
+}
+
+.container {
+  font-size:16px;
+  top:50%;
+  left:40%;
+  position:absolute;
+  color:#fff;
+  text-align:center;
+}
+
+.bar {
+  height:.3em;
+  width:30em;
+  border-radius:10px;
+  background:transparent;
+  box-shadow:inset 0px 0px 8px rgba(50,50,50,1);
+  overflow:hidden;
+  padding:5px;
+}
+
+.progress {
+  height:inherit;
+  border-radius:inherit;
+  width:0;
+  background:#6EC3EC;
+  animation:load 3s linear infinite;
+  animation-delay:2s;
+}
+
+@keyframes bounce{
+  0%{
+    transform:translateY(0px);
+  }
+  50%{
+    transform:translateY(-100px);
+  }
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+@keyframes load{
+  0%{
+    width:0%;
+  }
+  50%{
+    width:100%;
+  }
+  100% {
+    width:0%;
+    float:right;
+  }
+}
+</style>
+
+
+<div class="container">
+  <h3>COMING SOON</h3>
+  <div class="bar">
+    <div class="progress"></div>
+  </div>
+</div>
