@@ -9,5 +9,5 @@ urlpatterns = [
     path('home/', views.index, name='index'),
     path('about/', views.about, name='about'),
     path('forum/', views.forum, name='forum'),
-    re_path(r'^(?P<event_id>[0-9]+)/$', views.detail, name='detail'),
+    re_path(r'^home/(?P<event_id>[0-9]+)/$', views.detail, name='detail'),
 ]
