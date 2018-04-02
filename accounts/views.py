@@ -16,7 +16,7 @@ def login(request):
     else:
         form = AuthenticationForm()
     return render(request, 'accounts/login.html',{'form':form})
-
+    
 def signup(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
