@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from os.path import join
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'accounts.apps.AccountsConfig',
+    'events.apps.EventsConfig',
 ]
 
 MIDDLEWARE = [
@@ -57,8 +59,10 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-                '/home/about.html'
-                '/home/landing.html'
+                #os.path.join(BASE_DIR,'accounts/templates/accounts'),
+                os.path.join(BASE_DIR, 'templates'),
+                os.path.join(BASE_DIR, 'accounts','templates/accounts'),
+                os.path.join(BASE_DIR, 'events','templates/events'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -123,3 +127,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+MEDIA_URL = '/static/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')

@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %} {% block content %}
+<h1/> App events is running
+<div class="event">
+  <br/>
+  <h1>{{ event.event_name }}</a></h2> {# static loaded from staticfiles #}
+  <p>{{ event.event_url }}</p>
+  <p>{{ event.description }}</p>
+  <p>{{ event.date }}</p>
+  <p>{{ event.organiser }}</p>
+  <p>{{ event.contact_info }}</p>
+</div>
+
+{% endblock %}
